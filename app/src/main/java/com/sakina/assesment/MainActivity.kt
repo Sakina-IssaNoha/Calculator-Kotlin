@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        castView()
+    }
+    fun castView(){
         tilnum1=findViewById(R.id.tilnum1)
         tilnum2=findViewById(R.id.tilnum2)
         etnum1=findViewById(R.id.etnum1)
@@ -56,11 +59,11 @@ class MainActivity : AppCompatActivity() {
             var num2=etnum2.text.toString().toInt()
             division(num1,num2)
         }
-       btncalculate.setOnClickListener {
-           validate()
-       }
-
+        btncalculate.setOnClickListener {
+            validate()
+        }
     }
+
     fun validate(){
         tilnum1.error=null
         tilnum2.error=null
